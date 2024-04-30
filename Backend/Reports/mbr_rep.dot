@@ -1,0 +1,99 @@
+
+		digraph G {
+ 			fontname="Helvetica,Arial,sans-serif"
+			node [fontname="Helvetica,Arial,sans-serif"]
+			edge [fontname="Helvetica,Arial,sans-serif"]
+			concentrate=True;
+			rankdir=TB;
+			node [shape=record];
+
+			title [label="Reporte MBR" shape=plaintext fontname="Helvetica,Arial,sans-serif"];
+
+  			mbr[label="
+				{MBR: E.dsk|
+					{mbr_tamaño|20971520}
+					|{mbr_fecha_creacion|2024-04-29}
+					|{mbr_disk_signature|226838320}
+								
+		|Particion 1
+		|{part_status|0}
+		|{part_type|e}
+		|{part_fit|b}
+		|{part_start|159}
+		|{part_size|5242880}
+		|{part_name|part29}
+		|Particion Logica
+		|{part_status|0}
+		|{part_next|1048735}
+		|{part_fit|b}
+		|{part_start|160}
+		|{part_size|1048576}
+		|{part_name|part30}
+		|Particion Logica
+		|{part_status|0}
+		|{part_next|2097311}
+		|{part_fit|b}
+		|{part_start|1048736}
+		|{part_size|1048576}
+		|{part_name|part32}
+		|Particion Logica
+		|{part_status|0}
+		|{part_next|3145887}
+		|{part_fit|b}
+		|{part_start|2097312}
+		|{part_size|1048576}
+		|{part_name|part33}
+		|Particion Logica
+		|{part_status|0}
+		|{part_next|-1}
+		|{part_fit|b}
+		|{part_start|3145888}
+		|{part_size|1048576}
+		|{part_name|part34}
+		|Particion 2
+		|{part_status|1}
+		|{part_type|p}
+		|{part_fit|b}
+		|{part_start|5243039}
+		|{part_size|5242880}
+		|{part_name|part31}
+				}
+			"];
+			title2 [label="Reporte EBR" shape=plaintext fontname="Helvetica,Arial,sans-serif"];
+			
+			ebr[label="
+				{EBR
+		|Particion Logica
+		|{part_status|0}
+		|{part_next|1048735}
+		|{part_fit|b}
+		|{part_start|160}
+		|{part_size|1048576}
+		|{part_name|part30}
+		|Particion Logica
+		|{part_status|0}
+		|{part_next|2097311}
+		|{part_fit|b}
+		|{part_start|1048736}
+		|{part_size|1048576}
+		|{part_name|part32}
+		|Particion Logica
+		|{part_status|0}
+		|{part_next|3145887}
+		|{part_fit|b}
+		|{part_start|2097312}
+		|{part_size|1048576}
+		|{part_name|part33}
+		|Particion Logica
+		|{part_status|0}
+		|{part_next|-1}
+		|{part_fit|b}
+		|{part_start|3145888}
+		|{part_size|1048576}
+		|{part_name|part34}}
+			"];
+
+			title -> mbr [style=invis];
+    		mbr -> title2[style=invis];
+			title2 -> ebr[style=invis];
+		}
